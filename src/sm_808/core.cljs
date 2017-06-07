@@ -55,11 +55,8 @@
 (defn schedule-point!
   "Given an HTMLElement representing a point on the sequencer, determines when
   the point should flash, then schedules the event, accordingly."
-  [point-element]
-  (let [bpm (get-bpm)
-        ms-between-beats (/ min-ms bpm)
-        num (num-from-point-div point-element)
-        rate (* ms-between-beats 16)
+  [point-element ms-between-beats rate]
+  (let [num (num-from-point-div point-element)
         delay (* ms-between-beats (- num 1))]
     (swap! scheduled
            conj
@@ -73,8 +70,11 @@
   "Selects the points that have been selected by the user, then schedules the
   events corresponding to their being flashed."
   []
-  (doseq [point (sel :.selected)]
-    (schedule-point! point)))
+  (let [bpm (get-bpm)
+        ms-between-beats (/ min-ms bpm)
+        rate (* ms-between-beats 16)]
+    (doseq [point (sel :.selected)]
+      (schedule-point! point ms-between-beats rate))))
 
 (defn unschedule-points!
   "Clears the cache containing scheduled events."
