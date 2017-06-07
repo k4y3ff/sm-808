@@ -1,0 +1,15 @@
+/* some style */
+
+button {
+  background: grey;
+  color: white;
+}
+
+.point {
+  min-height: 20px;
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  margin: 2px;
+}

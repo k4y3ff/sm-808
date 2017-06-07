@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="icon" href="https://clojurescript.org/images/cljs-logo-icon-32.png">
+  </head>
+  <body>
+    <div id="app">
+      <h2>SM-808</h2>
+      <button type="button" id="stop">
+        <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+      </button>
+      <button type="button" id="play">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      </button>
+      <select id="bpm">
+        <option value="80">80 bpm</option>
+        <option value="100">100 bpm</option>
+        <option selected="selected" value="128">128 bpm</option>
+        <option value="140">140 bpm</option>
+        <option value="160">160 bpm</option>
+      </select>
+      <table id="sequencer">
+        <tr>
+          <th></th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>10</th>
+          <th>11</th>
+          <th>12</th>
+          <th>13</th>
+          <th>14</th>
+          <th>15</th>
+          <th>16</th>
+        </tr>
+        <tr>
+          <td>Kick</td>
+          <td><div class="point kick" id="kick-1"></div></td>
+          <td><div class="point kick" id="kick-2"></div></td>
+          <td><div class="point kick" id="kick-3"></div></td>
+          <td><div class="point kick" id="kick-4"></div></td>
+          <td><div class="point kick" id="kick-5"></div></td>
+          <td><div class="point kick" id="kick-6"></div></td>
+          <td><div class="point kick" id="kick-7"></div></td>
+          <td><div class="point kick" id="kick-8"></div></td>
+          <td><div class="point kick" id="kick-9"></div></td>
+          <td><div class="point kick" id="kick-10"></div></td>
+          <td><div class="point kick" id="kick-11"></div></td>
+          <td><div class="point kick" id="kick-12"></div></td>
+          <td><div class="point kick" id="kick-13"></div></td>
+          <td><div class="point kick" id="kick-14"></div></td>
+          <td><div class="point kick" id="kick-15"></div></td>
+          <td><div class="point kick" id="kick-16"></div></td>
+        </tr>
+        <tr>
+          <td>Snare</td>
+          <td><div class="point snare" id="snare-1"></div></td>
+          <td><div class="point snare" id="snare-2"></div></td>
+          <td><div class="point snare" id="snare-3"></div></td>
+          <td><div class="point snare" id="snare-4"></div></td>
+          <td><div class="point snare" id="snare-5"></div></td>
+          <td><div class="point snare" id="snare-6"></div></td>
+          <td><div class="point snare" id="snare-7"></div></td>
+          <td><div class="point snare" id="snare-8"></div></td>
+          <td><div class="point snare" id="snare-9"></div></td>
+          <td><div class="point snare" id="snare-10"></div></td>
+          <td><div class="point snare" id="snare-11"></div></td>
+          <td><div class="point snare" id="snare-12"></div></td>
+          <td><div class="point snare" id="snare-13"></div></td>
+          <td><div class="point snare" id="snare-14"></div></td>
+          <td><div class="point snare" id="snare-15"></div></td>
+          <td><div class="point snare" id="snare-16"></div></td>
+        </tr>
+        <tr>
+          <td>Hi-Hat</td>
+          <td><div class="point hihat" id="hihat-1"></div></td>
+          <td><div class="point hihat" id="hihat-2"></div></td>
+          <td><div class="point hihat" id="hihat-3"></div></td>
+          <td><div class="point hihat" id="hihat-4"></div></td>
+          <td><div class="point hihat" id="hihat-5"></div></td>
+          <td><div class="point hihat" id="hihat-6"></div></td>
+          <td><div class="point hihat" id="hihat-7"></div></td>
+          <td><div class="point hihat" id="hihat-8"></div></td>
+          <td><div class="point hihat" id="hihat-9"></div></td>
+          <td><div class="point hihat" id="hihat-10"></div></td>
+          <td><div class="point hihat" id="hihat-11"></div></td>
+          <td><div class="point hihat" id="hihat-12"></div></td>
+          <td><div class="point hihat" id="hihat-13"></div></td>
+          <td><div class="point hihat" id="hihat-14"></div></td>
+          <td><div class="point hihat" id="hihat-15"></div></td>
+          <td><div class="point hihat" id="hihat-16"></div></td>
+        </tr>
+      </table>
+    </div>
+    <script src="js/compiled/sm_808.js" type="text/javascript"></script>
+  </body>
+</html>
